@@ -1,0 +1,16 @@
+-- SQLite
+
+CREATE TABLE MEMBERS
+(
+  ID   REAL NULL    ,
+  NAME TEXT NULL    ,
+  AGE  REAL NULL    ,
+  SEX  TEXT NULL    ,
+  ROLE TEXT NULL    
+);
+
+CREATE TABLE THINK
+(
+  ID           REAL NULL    ,
+  VERIFICATION TEXT NULL    
+);
