@@ -2,8 +2,8 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 5,
-    "scrollLeft": 291,
+    "scrollTop": 0,
+    "scrollLeft": 0,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -61,7 +61,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -128,7 +128,7 @@
           "left": 0,
           "widthName": 60,
           "widthComment": 60,
-          "zIndex": 127
+          "zIndex": 175
         }
       },
       {
@@ -184,7 +184,7 @@
         ],
         "id": "d304e76d-08e6-4e04-92ed-60eda2fc6eec",
         "ui": {
-          "active": true,
+          "active": false,
           "top": 91,
           "left": 733,
           "widthName": 72,
@@ -313,10 +313,178 @@
           "widthComment": 60,
           "zIndex": 131
         }
+      },
+      {
+        "name": "MULTI_BOARD",
+        "comment": "",
+        "columns": [
+          {
+            "name": "MOVIE_TITLE",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "id": "a2fa5599-2dc8-4bbd-8c3d-5bf57a4469e7",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 78,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "name": "MOVIE_CONTENT",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "id": "f7b12a1c-fc39-4b61-a96c-9d05d40eba8a",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 107,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "name": "FILES_ID",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "id": "6d74a034-78cc-420f-a37a-6dc7e120641e",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "name": "MEMBER_ID",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "id": "e7b1e66f-584c-43e7-846d-e3caef24a7c4",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 73,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "id": "98f55f39-6a16-479e-93ba-7bb5e658ff26",
+        "ui": {
+          "active": true,
+          "top": 423,
+          "left": 71,
+          "widthName": 89,
+          "widthComment": 60,
+          "zIndex": 176
+        }
+      },
+      {
+        "name": "ATTACH_FILES",
+        "comment": "",
+        "columns": [
+          {
+            "name": "FILES_ID",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "id": "5fe02920-910c-4140-a0f9-7498255687bd",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "name": "FILES_NAME",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "id": "dd2c5538-3724-486a-ae9c-0794612144b3",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 75,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "id": "0935193e-936a-4633-8455-95788e7ae02f",
+        "ui": {
+          "active": false,
+          "top": 465,
+          "left": 673,
+          "widthName": 86,
+          "widthComment": 60,
+          "zIndex": 171
+        }
       }
     ],
     "tableFocus": {
-      "focusName": false,
+      "focusName": true,
       "focusComment": false,
       "focusColumns": [
         {
@@ -327,11 +495,11 @@
           "focusDefault": false,
           "focusComment": false,
           "column": {
-            "name": "AUTHORITY_NAME",
+            "name": "MOVIE_TITLE",
             "comment": "",
             "dataType": "TEXT",
             "default": "",
-            "id": "d2197f98-a695-408a-b3c6-2dedf70a4a7d",
+            "id": "a2fa5599-2dc8-4bbd-8c3d-5bf57a4469e7",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
@@ -343,7 +511,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 115,
+              "widthName": 78,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -351,71 +519,18 @@
           }
         },
         {
-          "selected": true,
-          "focusName": true,
+          "selected": false,
+          "focusName": false,
           "focusDataType": false,
           "focusNotNull": false,
           "focusDefault": false,
           "focusComment": false,
           "column": {
-            "name": "AUTHORITY_ID",
+            "name": "MOVIE_CONTENT",
             "comment": "",
             "dataType": "TEXT",
             "default": "",
-            "id": "b363332f-6bfb-4b19-8bff-917fbf45a985",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 90,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            }
-          }
-        }
-      ],
-      "currentFocusTable": false,
-      "currentColumn": {
-        "name": "AUTHORITY_ID",
-        "comment": "",
-        "dataType": "TEXT",
-        "default": "",
-        "id": "b363332f-6bfb-4b19-8bff-917fbf45a985",
-        "option": {
-          "autoIncrement": false,
-          "primaryKey": true,
-          "unique": false,
-          "notNull": true
-        },
-        "ui": {
-          "active": false,
-          "pk": true,
-          "fk": false,
-          "pfk": false,
-          "widthName": 90,
-          "widthComment": 60,
-          "widthDataType": 60,
-          "widthDefault": 60
-        }
-      },
-      "table": {
-        "name": "AUTHORITY",
-        "comment": "",
-        "columns": [
-          {
-            "name": "AUTHORITY_NAME",
-            "comment": "",
-            "dataType": "TEXT",
-            "default": "",
-            "id": "d2197f98-a695-408a-b3c6-2dedf70a4a7d",
+            "id": "f7b12a1c-fc39-4b61-a96c-9d05d40eba8a",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
@@ -427,44 +542,152 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 115,
+              "widthName": 107,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          }
+        },
+        {
+          "selected": false,
+          "focusName": false,
+          "focusDataType": false,
+          "focusNotNull": false,
+          "focusDefault": false,
+          "focusComment": false,
+          "column": {
+            "name": "FILES_ID",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "id": "6d74a034-78cc-420f-a37a-6dc7e120641e",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          }
+        }
+      ],
+      "currentFocusTable": true,
+      "currentColumn": null,
+      "table": {
+        "name": "MULTI_BOARD",
+        "comment": "",
+        "columns": [
+          {
+            "name": "MOVIE_TITLE",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "id": "a2fa5599-2dc8-4bbd-8c3d-5bf57a4469e7",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 78,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
             }
           },
           {
-            "name": "AUTHORITY_ID",
+            "name": "MOVIE_CONTENT",
             "comment": "",
             "dataType": "TEXT",
             "default": "",
-            "id": "b363332f-6bfb-4b19-8bff-917fbf45a985",
+            "id": "f7b12a1c-fc39-4b61-a96c-9d05d40eba8a",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 107,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "name": "FILES_ID",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "id": "6d74a034-78cc-420f-a37a-6dc7e120641e",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
-              "fk": false,
+              "pk": false,
+              "fk": true,
               "pfk": false,
-              "widthName": 90,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "name": "MEMBER_ID",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "id": "e7b1e66f-584c-43e7-846d-e3caef24a7c4",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 73,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
             }
           }
         ],
-        "id": "d304e76d-08e6-4e04-92ed-60eda2fc6eec",
+        "id": "98f55f39-6a16-479e-93ba-7bb5e658ff26",
         "ui": {
           "active": true,
-          "top": 91,
-          "left": 733,
-          "widthName": 72,
+          "top": 423,
+          "left": 71,
+          "widthName": 89,
           "widthComment": 60,
-          "zIndex": 132
+          "zIndex": 176
         }
       }
     },
@@ -544,6 +767,52 @@
           "x": 728,
           "y": 119,
           "direction": "right"
+        }
+      },
+      {
+        "identification": false,
+        "id": "3b846cca-ebb4-43f8-96f7-682aa72271c5",
+        "relationshipType": "ZeroOneN",
+        "start": {
+          "tableId": "0935193e-936a-4633-8455-95788e7ae02f",
+          "columnIds": [
+            "5fe02920-910c-4140-a0f9-7498255687bd"
+          ],
+          "x": 673,
+          "y": 521,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "98f55f39-6a16-479e-93ba-7bb5e658ff26",
+          "columnIds": [
+            "6d74a034-78cc-420f-a37a-6dc7e120641e"
+          ],
+          "x": 462,
+          "y": 501.5,
+          "direction": "right"
+        }
+      },
+      {
+        "identification": false,
+        "id": "088a9104-507e-42bf-97b6-391cea53c3d8",
+        "relationshipType": "ZeroOneN",
+        "start": {
+          "tableId": "6ef4c4d7-cb1f-46e7-b724-0a8e9e38fd40",
+          "columnIds": [
+            "0366f3b9-d034-4376-9964-3fb0b8a0ea72"
+          ],
+          "x": 193.5,
+          "y": 270,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "98f55f39-6a16-479e-93ba-7bb5e658ff26",
+          "columnIds": [
+            "e7b1e66f-584c-43e7-846d-e3caef24a7c4"
+          ],
+          "x": 266.5,
+          "y": 423,
+          "direction": "top"
         }
       }
     ],
