@@ -1,0 +1,3 @@
+-- SQLite
+-- SELECT * FROM breast_cancer_table ORDER BY mean_radius;
+-- SELECT * FROM breast_cancer_table ORDER BY mean_area DESC;
