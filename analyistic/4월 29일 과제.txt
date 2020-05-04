@@ -1,0 +1,21 @@
+iris, wine, breast cancer, titanic 각 각 포함해 DB화
+결과 (target) 그룹 기준으로 GROUP BY 하기
+DataSet Column 성격 맞게 Function 적용해 Table로 저장
+문자는 upper, lower, length
+숫자는 count, max, min, avg 중 하나 선택
+
+
+colab
+1. [data] rename column
+2. [target] rename column 
+3. [data]와 [target] 좌우로 column 붙이기
+4. pd.DataFrame( [data] + [target] )
+5. sqlite3 이용하여 .db 및 sql로 저장
+
+visual studio code
+1. .db와 sql 불러오기
+2. target 기준으로 GROUP BY하기
+3. 각각의 column에 function을 이용하여 평균이든 뭐든 종합적으로 나타낼만한 것으로 요약하여 표현하기
+4. CREATE TABLE 을 이용하여 새로운 TABLE에 저장
+
+TABLE 2개 생성
