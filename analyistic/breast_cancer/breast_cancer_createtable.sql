@@ -1,4 +1,5 @@
 -- SQLite
+
 -- SELECT * FROM data_target_table
 -- GROUP BY target;
 
@@ -13,9 +14,8 @@
 -- SELECT avg(meansymmetry) FROM data_target_table; 
 -- SELECT avg(meanfractaldimension) FROM data_target_table; 
 
-
-
--- CREATE TABLE groupbytarget (
+-- CREATE TABLE groupbytarget_2( 
+-- 'index' REAL NOT NULL,
 -- meanradius REAL NOT NULL, 
 -- meantexture REAL NOT NULL, 
 -- meanperimeter REAL NOT NULL, 
@@ -46,13 +46,66 @@
 -- worstconcavepoints REAL NOT NULL, 
 -- worstsymmetry REAL NOT NULL, 
 -- worstfractaldimension REAL NOT NULL,
--- target REAL NOT NULL
--- );/
+-- target REAL NOT NULL);
+
+
+-- INSERT INTO groupbytarget_2
+-- SELECT 
+-- count('index'),
+-- avg(meanradius), avg(meantexture), avg(meanperimeter), avg(meanarea), avg(meansmoothness), avg(meancompactness), avg(meanconcavity), avg(meanconcavepoints), avg(meansymmetry), avg(meanfractaldimension),
+-- avg(radiuserror), avg(textureerror), avg(perimetererror), avg(areaerror), avg(smoothnesserror), avg(compactnesserror), avg(concavityerror), avg(concavepointserror), avg(symmetryerror), avg(fractaldimensionerror),                                                 
+-- max(worstradius), max(worsttexture), max(worstperimeter), max(worstarea), max(worstsmoothness), max(worstcompactness), max(worstconcavity), max(worstconcavepoints), max(worstsymmetry), max(worstfractaldimension),
+-- target
+-- FROM data_target_table
+-- GROUP BY target;
+
+
+CREATE TABLE groupbytarget_3( 
+'index' REAL NOT NULL,
+meanradius REAL NOT NULL, 
+meantexture REAL NOT NULL, 
+meanperimeter REAL NOT NULL, 
+meanarea REAL NOT NULL, 
+meansmoothness REAL NOT NULL, 
+meancompactness REAL NOT NULL, 
+meanconcavity REAL NOT NULL, 
+meanconcavepoints REAL NOT NULL, 
+meansymmetry REAL NOT NULL, 
+meanfractaldimension REAL NOT NULL,
+radiuserror REAL NOT NULL, 
+textureerror REAL NOT NULL, 
+perimetererror REAL NOT NULL, 
+areaerror REAL NOT NULL, 
+smoothnesserror REAL NOT NULL, 
+compactnesserror REAL NOT NULL, 
+concavityerror REAL NOT NULL, 
+concavepointserror REAL NOT NULL, 
+symmetryerror REAL NOT NULL, 
+fractaldimensionerror REAL NOT NULL,                                                 
+worstradius REAL NOT NULL, 
+worsttexture REAL NOT NULL, 
+worstperimeter REAL NOT NULL, 
+worstarea REAL NOT NULL, 
+worstsmoothness REAL NOT NULL, 
+worstcompactness REAL NOT NULL, 
+worstconcavity REAL NOT NULL, 
+worstconcavepoints REAL NOT NULL, 
+worstsymmetry REAL NOT NULL, 
+worstfractaldimension REAL NOT NULL,
+target REAL NOT NULL,
+target_name TEXT NOT NULL);
 
 
 
-INSERT INTO groupbytarget
+
+INSERT INTO groupbytarget_3 (target_name) VALUES ('Malignant 악성종양')
+WHERE target.groupbytarget_3 == 0;
+INSERT INTO groupbytarget_3 (target_name) VALUES ('Benign 양성종양')
+WHERE target.groupbytarget_3 == 1;
+
+INSERT INTO groupbytarget_3
 SELECT 
+count('index'),
 avg(meanradius), avg(meantexture), avg(meanperimeter), avg(meanarea), avg(meansmoothness), avg(meancompactness), avg(meanconcavity), avg(meanconcavepoints), avg(meansymmetry), avg(meanfractaldimension),
 avg(radiuserror), avg(textureerror), avg(perimetererror), avg(areaerror), avg(smoothnesserror), avg(compactnesserror), avg(concavityerror), avg(concavepointserror), avg(symmetryerror), avg(fractaldimensionerror),                                                 
 max(worstradius), max(worsttexture), max(worstperimeter), max(worstarea), max(worstsmoothness), max(worstcompactness), max(worstconcavity), max(worstconcavepoints), max(worstsymmetry), max(worstfractaldimension),
