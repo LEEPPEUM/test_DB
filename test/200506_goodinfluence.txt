@@ -1,0 +1,87 @@
+판다스 SQL DB 부르기
+
+ERD 참고하여 CREATE TABLE 만들기
+
+SELECT WHERE 등
+
+, , ,  판다스로 split
+
+1. sql 문
+2. 판다스 노트북 부분
+
+
+fill -> UPDATE
+
+DISTINCT 
+
+1:N
+PK FK
+PK 에다가 rowid를 넣기
+
+table dump
+
+
+DELETE
+UPDATE
+INSERT
+위 세개는 TABLE 조합 여러개 묶어서 못함.
+한개의 TABLE로만 한번 적용 가능
+
+SELECT만 TABLE 조합, 묶어서 가져올 수 있음.
+JOINT
+
+
+한쪽이 쏠려있으면 쏠린쪽으로 RECORD가 간다.
+PK와 FK JOINT
+3단 JOINT
+실제로는 8개정도를 JOINT 함
+PK와 FK
+레코드 뻥튀기 하지 않도록 주의해야
+
+동일한 컬럼의 동일한 값
+
+
+
+LEFT JOINT 쏠림 쪼인, 기준 쪼인
+TABLE A 한쪽이 기준이 되어
+
+크로스조인트 = 전체
+A  B
+3  2 RECORD
+A1 이랑 B1, B2
+..
+..
+3X2 = 6개
+곱하기
+스타 조인
+클러스터링 -> 하우싱 -> 빅데이타
+
+
+** INNER JOINT
+** LEFT JOINT
+
+
+TABLE, TABLE 콤마로 구분 -> 오라클 방식 
+TABLE (INNER OR LEFT) JOINT TABLE -> 모든 DB에서 적용가능한 FORMAL 타입
+
+2단 조인트
+
+TABLE A JOINT TABLE B ON [conditon] -> ON은 WHERE 과 같음. PK와 FK가 같을 경우.
+
+A와 B의 COLUMN 이름이 같은 경우 그냥 SELECT 해줘버리면 두개가 같으므로 ERROR가 뜨므로
+구체적으로 어느테이블의 어느 컬럼인지 명시해 주어야 한다.
+ 
+DEPT, ID
+ERROR
+
+3단 조인트
+
+단계적으로 조인이 일어난다.
+위에서 아래로 한개한개씩 차례로 조인이 일어남.
+
+INNER JOINT은 작은쪽
+LEFT JOINT 외 나머지은 큰쪽으로 나온다. 
+
+OLD 있던거 지우고
+무작위로 레코드 3개 넣고
+COM OLD INNER JOINT 레코드 3개 나오도록
